@@ -18,7 +18,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 
-app.get("/scrape", function (req, res) {
+app.get("/", function (req, res) {
   // First, we grab the body of the html with axios
   axios.get("https://jamesclear.com/articles").then(function (response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
